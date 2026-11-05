@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-cyan">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yokeshwaran R | Computer Science Student & Software Engineer</title>
+  <meta name="description" content="Personal portfolio of Yokeshwaran R — Undergraduate B.Sc. Computer Science Student at Hindustan College, Chennai (Batch 2023–2027), Alumnus of MCTM School. Passionate about full-stack engineering, algorithms, and systems.">
+  <meta name="keywords" content="Yokeshwaran R, Hindustan College, MCTM School, Alwarpet Chennai, Computer Science Student, Portfolio, Frontend Engineer, Software Developer">
+  <meta name="author" content="Yokeshwaran R">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yokeshwaran R | Portfolio">
+  <meta property="og:description" content="Undergraduate Computer Science Student at Hindustan College, Chennai. Explore projects, technical skills, and academic journey.">
+  <meta property="og:image" content="assets/images/og-preview.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Interactive Background Canvas & Ambient Orbs -->
+  <canvas id="particle-canvas"></canvas>
+  <div class="glow-orb glow-orb-cyan hero-glow-1"></div>
+  <div class="glow-orb glow-orb-purple hero-glow-2"></div>
+
+  <!-- =====================================================================
+       SITE HEADER & NAVIGATION
+  ===================================================================== -->
+  <header id="site-header">
+    <div class="container header-container">
+      <a href="#hero" class="logo" aria-label="Yokeshwaran R Home">
+        <div class="logo-badge">YR</div>
+        <span class="logo-text">Yokeshwaran<span class="gradient-text">.dev</span></span>
+        <span class="logo-tag">B.Sc CS</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons & Tools -->
+      <div class="header-actions">
+        <!-- Audio FX Toggle -->
+        <button id="sound-toggle-btn" class="icon-btn" aria-label="Toggle Sound Effects" title="Sound FX: MUTED (Click to activate)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+        </button>
+
+        <!-- Theme Accent Switcher -->
+        <button id="theme-glow-toggle" class="icon-btn" aria-label="Cycle Glow Accent Color" title="Cycle Glow Accent Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Interactive Terminal CLI Trigger -->
+        <button class="btn btn-secondary btn-sm" data-open-terminal aria-label="Open Interactive CLI Terminal">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="4 17 10 11 4 5"></polyline>
+            <line x1="12" y1="19" x2="20" y2="19"></line>
+          </svg>
+          <span>Terminal</span>
+        </button>
+
+        <!-- Resume Modal Trigger -->
+        <button class="btn btn-primary btn-sm" data-open-resume aria-label="View Resume">
+          <span>Resume</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" class="mobile-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="mobile-menu" aria-label="Mobile Navigation Drawer">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#education">Education & Timeline</a>
+      <a href="#skills">Technical Arsenal</a>
+      <a href="#projects">Featured Projects</a>
+      <a href="#contact">Contact & Socials</a>
+      <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 12px;">
+        <button class="btn btn-secondary" data-open-terminal>Launch Terminal CLI</button>
+        <button class="btn btn-primary" data-open-resume>Preview Resume</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =====================================================================
+         HERO SECTION
+    ===================================================================== -->
+    <section id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left Column: Bio & Core Message -->
+          <div class="hero-content animate-fadeInUp">
+            <!-- Availability Pill -->
+            <div class="hero-status-pill">
+              <span class="beacon-dot"></span>
+              <span>Available for SDE Internships • Batch 2023–2027</span>
+            </div>
+
+            <div class="hero-name-label">
+              <span>// HELLO WORLD, I'M</span>
+            </div>
+
+            <h1 class="hero-title">
+              Yokeshwaran R<br>
+              <span class="gradient-text">Architecting Future Web & Systems</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Undergraduate <strong>Computer Science</strong> student at <strong>Hindustan College</strong>, Chennai. Blending algorithmic foundations, high-throughput backend services, and pixel-perfect interactive design.
+            </p>
+
+            <!-- Quick Information Tags -->
+            <div class="hero-highlight-chips">
+              <span class="hero-chip">
+                <span class="hero-chip-icon">📍</span> Alwarpet, Chennai, TN
+              </span>
+              <span class="hero-chip">
+                <span class="hero-chip-icon">🎓</span> Hindustan College (2023–2027)
+              </span>
+              <span class="hero-chip">
+                <span class="hero-chip-icon">🏫</span> MCTM School Alumnus
+              </span>
+              <span class="hero-chip">
+                <span class="hero-chip-icon">⚡</span> B.Sc. Computer Science
+              </span>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                <span>Explore Projects</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+
+              <button class="btn btn-secondary" data-open-terminal>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 17 10 11 4 5"></polyline>
+                  <line x1="12" y1="19" x2="20" y2="19"></line>
+                </svg>
+                <span>Launch CLI Console</span>
+              </button>
+
+              <a href="#contact" class="btn btn-outline">
+                <span>Get in Touch</span>
+              </a>
+            </div>
+
+            <!-- Metrics Band -->
+            <div class="hero-metrics-band">
+              <div class="hero-metric-item">
+                <span class="metric-val">2023–2027</span>
+                <span class="metric-label">Academic Batch</span>
+              </div>
+              <div class="hero-metric-item">
+                <span class="metric-val">15+</span>
+                <span class="metric-label">Projects & Labs</span>
+              </div>
+              <div class="hero-metric-item">
+                <span class="metric-val" id="chennai-clock">--:--:-- IST</span>
+                <span class="metric-label">Chennai Local Time</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Terminal Preview Card with 3D Tilt -->
+          <div class="hero-preview-wrapper" data-tilt data-tilt-max="7">
+            <div class="tilt-glare"></div>
+            <div class="hero-terminal-card">
+              <div class="terminal-titlebar">
+                <div class="terminal-lights">
+                  <span class="t-light t-light-red"></span>
+                  <span class="t-light t-light-yellow"></span>
+                  <span class="t-light t-light-green"></span>
+                </div>
+                <span class="terminal-title-text">yokeshwaran@chennai-host:~</span>
+                <span style="font-size: 0.75rem; color: var(--accent-cyan); font-family: var(--font-mono);">zsh</span>
+              </div>
+
+              <div class="terminal-content">
+                <div class="terminal-row">
+                  <span class="t-prompt">$</span> <span class="t-cmd">whoami --profile</span>
+                </div>
+                <div class="terminal-row">
+                  <span class="t-key">Name:</span> <span class="t-val">Yokeshwaran R</span><br>
+                  <span class="t-key">Degree:</span> <span class="t-val">B.Sc. Computer Science</span><br>
+                  <span class="t-key">College:</span> <span class="t-val-purple">Hindustan College</span><br>
+                  <span class="t-key">School:</span> <span class="t-val">MCTM School, Chennai</span><br>
+                  <span class="t-key">Batch:</span> <span class="t-val">2023 – 2027</span><br>
+                  <span class="t-key">Location:</span> <span class="t-val-green">Alwarpet, Chennai, TN, India</span><br>
+                  <span class="t-key">Core Strengths:</span> <span class="t-val">DSA, Full-Stack, Web APIs, Systems</span>
+                </div>
+
+                <div class="terminal-row" style="margin-top: 14px;">
+                  <span class="t-prompt">$</span> <span class="t-cmd">git status</span><br>
+                  <span class="t-val-green">On branch main: Ready for high-impact engineering challenges.</span>
+                </div>
+
+                <div class="terminal-cta">
+                  <span style="color: var(--text-muted); font-size: 0.78rem;">Press ` or Ctrl+K to open shell</span>
+                  <button class="terminal-cta-btn" data-open-terminal>Open Interactive CLI</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         ABOUT SECTION
+    ===================================================================== -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="section-tag-dot"></span>
+            <span>Personal Profile</span>
+          </div>
+          <h2 class="section-title">Driven by Curiosity, Engineered with Precision</h2>
+          <p class="section-desc">From foundational principles to modern distributed applications.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Text Story -->
+          <div class="about-text">
+            <p>
+              I am an undergraduate Computer Science student at <strong>Hindustan College</strong> in Chennai (Batch 2023–2027), deeply enthusiastic about how software layers connect—from low-level memory concepts and algorithmic efficiency to intuitive, ultra-fast frontend interactions.
+            </p>
+            <p>
+              My academic journey began at <strong>MCTM School</strong> in Chennai, where rigorous analytical problem-solving and mathematical reasoning sparked my passion for computing. Today, based out of <strong>Alwarpet, Chennai</strong>, I channel that dedication into architecting full-stack web platforms, studying operating systems, and building open-source projects.
+            </p>
+            <p>
+              Whether it's implementing complex data structures in <strong>C++</strong>, crafting dynamic web apps in <strong>React & Node.js</strong>, or designing clean database schemas in <strong>SQL & MongoDB</strong>, I treat code as both a technical craft and an art form.
+            </p>
+
+            <div class="about-pills">
+              <span class="hero-chip">✨ Problem Solver</span>
+              <span class="hero-chip">🚀 Fast Learner</span>
+              <span class="hero-chip">🤝 Team Collaborator</span>
+              <span class="hero-chip">📐 Clean Architecture</span>
+              <span class="hero-chip">⚡ 60fps UI/UX</span>
+            </div>
+          </div>
+
+          <!-- Profile Spec Matrix Card -->
+          <div class="profile-stat-box glass-panel" data-tilt data-tilt-max="5">
+            <div class="tilt-glare"></div>
+            <div class="profile-card-header">
+              <div class="profile-avatar">
+                YR
+              </div>
+              <div class="profile-header-info">
+                <h4>Yokeshwaran R</h4>
+                <span>// CS Undergraduate & Builder</span>
+              </div>
+            </div>
+
+            <div class="spec-list">
+              <div class="spec-item">
+                <span class="spec-title">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                  Degree
+                </span>
+                <span class="spec-val">B.Sc. Computer Science</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-title">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  Academic Batch
+                </span>
+                <span class="spec-val">2023 – 2027</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-title">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                  Institution
+                </span>
+                <span class="spec-val">Hindustan College</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-title">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                  School
+                </span>
+                <span class="spec-val">MCTM School</span>
+              </div>
+
+              <div class="spec-item">
+                <span class="spec-title">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  Location
+                </span>
+                <span class="spec-val">Alwarpet, Chennai, TN</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         EDUCATION & ACADEMIC TIMELINE
+    ===================================================================== -->
+    <section id="education">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="section-tag-dot"></span>
+            <span>Academic Pathway</span>
+          </div>
+          <h2 class="section-title">Education & Milestones</h2>
+          <p class="section-desc">Academic excellence and foundational milestones shaping my technical discipline.</p>
+        </div>
+
+        <div class="timeline">
+          
+          <!-- Item 1: Hindustan College -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="timeline-marker-inner"></div>
+            </div>
+
+            <div class="timeline-card glass-panel" data-tilt data-tilt-max="5">
+              <div class="tilt-glare"></div>
+              <div class="timeline-card-header">
+                <div>
+                  <h3 class="timeline-title">B.Sc. Computer Science</h3>
+                  <div class="timeline-institution">Hindustan College, Chennai</div>
+                </div>
+                <span class="timeline-badge">2023 – 2027 • Current</span>
+              </div>
+
+              <div class="timeline-body">
+                <p>
+                  Immersed in comprehensive computer science curriculum with strong emphasis on algorithmic problem solving, software engineering principles, operating system internals, database architecture, and collaborative project development.
+                </p>
+                <div class="timeline-highlights">
+                  <span class="t-tag">Data Structures & Algorithms</span>
+                  <span class="t-tag">Object-Oriented Programming (C++/Java)</span>
+                  <span class="t-tag">Database Management Systems (RDBMS)</span>
+                  <span class="t-tag">Computer Networks & Web Systems</span>
+                  <span class="t-tag">Operating Systems</span>
+                  <span class="t-tag">Software Engineering Practices</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: MCTM School -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="timeline-marker-inner"></div>
+            </div>
+
+            <div class="timeline-card glass-panel" data-tilt data-tilt-max="5">
+              <div class="tilt-glare"></div>
+              <div class="timeline-card-header">
+                <div>
+                  <h3 class="timeline-title">Higher Secondary & Secondary Education</h3>
+                  <div class="timeline-institution">MCTM School, Chennai</div>
+                </div>
+                <span class="timeline-badge">Foundational Milestones</span>
+              </div>
+
+              <div class="timeline-body">
+                <p>
+                  Completed schooling with high distinction at the prestigious MCTM School in Chennai. Built rigorous foundations in mathematics, physical sciences, logical deductions, and introductory computer science literacy.
+                </p>
+                <div class="timeline-highlights">
+                  <span class="t-tag">Advanced Mathematics</span>
+                  <span class="t-tag">Physics & Chemistry</span>
+                  <span class="t-tag">Computer Science Foundations</span>
+                  <span class="t-tag">Analytical Reasoning</span>
+                  <span class="t-tag">Co-curricular & Tech Clubs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SKILLS & TECHNICAL ARSENAL
+    ===================================================================== -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="section-tag-dot"></span>
+            <span>Capabilities</span>
+          </div>
+          <h2 class="section-title">Technical Arsenal</h2>
+          <p class="section-desc">Languages, libraries, databases, and developer tools in my daily workflow.</p>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- Category 1: Programming Languages -->
+          <div class="skill-category-card glass-panel" data-tilt data-tilt-max="6">
+            <div class="tilt-glare"></div>
+            <div class="skill-category-header">
+              <div class="skill-icon-badge">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <h3 class="skill-category-title">Core Languages</h3>
+            </div>
+            <div class="skill-items-list">
+              <span class="skill-chip"><span class="skill-dot"></span>C++</span>
+              <span class="skill-chip"><span class="skill-dot"></span>Python</span>
+              <span class="skill-chip"><span class="skill-dot"></span>JavaScript (ES6+)</span>
+              <span class="skill-chip"><span class="skill-dot"></span>TypeScript</span>
+              <span class="skill-chip"><span class="skill-dot"></span>Java</span>
+              <span class="skill-chip"><span class="skill-dot"></span>SQL</span>
+              <span class="skill-chip"><span class="skill-dot"></span>HTML5 / CSS3</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Frontend Engineering -->
+          <div class="skill-category-card glass-panel" data-tilt data-tilt-max="6">
+            <div class="tilt-glare"></div>
+            <div class="skill-category-header">
+              <div class="skill-icon-badge">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <h3 class="skill-category-title">Frontend & UI/UX</h3>
+            </div>
+            <div class="skill-items-list">
+              <span class="skill-chip"><span class="skill-dot"></span>React.js</span>
+              <span class="skill-chip"><span class="skill-dot"></span>Tailwind CSS</span>
+              <span class="skill-chip"><span class="skill-dot"></span>HTML5 Canvas API</span>
+              <span class="skill-chip"><span class="skill-dot"></span>Responsive Layouts</span>
+              <span class="skill-chip"><span class="skill-dot"></span>State Architecture</span>
+              <span class="skill-chip"><span class="skill-dot"></span>Glassmorphism & CSS</span>
+              <span class="skill-chip"><span class="skill-dot"></span>Web Audio API</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Backend & Databases -->
+          <div class="skill-category-card glass-panel" data-tilt data-tilt-max="6">
+            <div class="tilt-glare"></div>
+            <div class="skill-category-header">
+              <div class="skill-icon-badge">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              </div>
+              <h3 class="skill-category-title">Backend & Data</h3>
+            </div>
+            <div class="skill-items-list">
+              <span class="skill-chip"><span class="skill-dot"></span>Node.js</span>
+              <span class="skill-chip"><span class="skill-dot"></span>Express.js</span>
+              <span class="skill-chip"><span class="skill-dot"></span>RESTful APIs</span>
+              <span class="skill-chip"><span class="skill-dot"></span>MySQL / PostgreSQL</span>
+              <span class="skill-chip"><span class="skill-dot"></span>MongoDB</span>
+              <span class="skill-chip"><span class="skill-dot"></span>JWT Authentication</span>
+              <span class="skill-chip"><span class="skill-dot"></span>WebSockets</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Tools & CS Concepts -->
+          <div class="skill-category-card glass-panel" data-tilt data-tilt-max="6">
+            <div class="tilt-glare"></div>
+            <div class="skill-category-header">
+              <div class="skill-icon-badge">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+              </div>
+              <h3 class="skill-category-title">Tools & Core CS</h3>
+            </div>
+            <div class="skill-items-list">
+              <span class="skill-chip"><span class="skill-dot"></span>Git & GitHub</span>
+              <span class="skill-chip"><span class="skill-dot"></span>Linux / Bash Shell</span>
+              <span class="skill-chip"><span class="skill-dot"></span>Data Structures & DSA</span>
+              <span class="skill-chip"><span class="skill-dot"></span>OOP Principles</span>
+              <span class="skill-chip"><span class="skill-dot"></span>VS Code & Postman</span>
+              <span class="skill-chip"><span class="skill-dot"></span>Vercel & Cloud Deploy</span>
+              <span class="skill-chip"><span class="skill-dot"></span>Performance Tuning</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         FEATURED PROJECTS
+    ===================================================================== -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="section-tag-dot"></span>
+            <span>Craft & Engineering</span>
+          </div>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-desc">A selection of end-to-end applications, algorithmic visualizers, and system tools.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="project-filters">
+          <button class="filter-pill active" data-filter="all">All Projects</button>
+          <button class="filter-pill" data-filter="fullstack">Full Stack</button>
+          <button class="filter-pill" data-filter="systems">Systems & DSA</button>
+          <button class="filter-pill" data-filter="frontend">Frontend & Data</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          
+          <!-- Project 1: NexusFlow -->
+          <article class="project-card glass-panel" data-category="fullstack" data-tilt data-tilt-max="7">
+            <div class="tilt-glare"></div>
+            <div>
+              <div class="project-badge-row">
+                <span class="project-type-tag">Full-Stack / Cloud Architecture</span>
+                <span class="project-year">2024</span>
+              </div>
+              <h3 class="project-title">NexusFlow</h3>
+              <p class="project-desc">
+                High-throughput collaborative kanban and workflow intelligence engine with sub-15ms WebSocket state syncing, optimistic mutations, and automated sprint metrics.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-pill">React 18</span>
+                <span class="tech-pill">TypeScript</span>
+                <span class="tech-pill">Node.js</span>
+                <span class="tech-pill">PostgreSQL</span>
+                <span class="tech-pill">WebSockets</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <button class="project-view-btn" data-project-id="nexusflow">
+                <span>View Details</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+              <div class="project-external-links">
+                <a href="https://github.com/yokeshwaran/nexusflow" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="GitHub Repository">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: AuraStream -->
+          <article class="project-card glass-panel" data-category="frontend" data-tilt data-tilt-max="7">
+            <div class="tilt-glare"></div>
+            <div>
+              <div class="project-badge-row">
+                <span class="project-type-tag">Frontend & Telemetry</span>
+                <span class="project-year">2024</span>
+              </div>
+              <h3 class="project-title">AuraStream</h3>
+              <p class="project-desc">
+                High-performance real-time telemetry monitoring dashboard with hardware-accelerated 60fps canvas charts, processing 10,000+ data points/sec with zero latency hitching.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-pill">TypeScript</span>
+                <span class="tech-pill">Canvas API</span>
+                <span class="tech-pill">Node.js</span>
+                <span class="tech-pill">Redis</span>
+                <span class="tech-pill">Tailwind CSS</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <button class="project-view-btn" data-project-id="aurastream">
+                <span>View Details</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+              <div class="project-external-links">
+                <a href="https://github.com/yokeshwaran/aurastream" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="GitHub Repository">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Algoverse -->
+          <article class="project-card glass-panel" data-category="systems" data-tilt data-tilt-max="7">
+            <div class="tilt-glare"></div>
+            <div>
+              <div class="project-badge-row">
+                <span class="project-type-tag">Core CS / Algorithms</span>
+                <span class="project-year">2024</span>
+              </div>
+              <h3 class="project-title">Algoverse</h3>
+              <p class="project-desc">
+                Interactive algorithm simulation sandbox illustrating sorting mechanisms (QuickSort, MergeSort), graph traversals (Dijkstra, A*), and dynamic memory state changes.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-pill">Vanilla ES6+</span>
+                <span class="tech-pill">Canvas Engine</span>
+                <span class="tech-pill">Web Audio</span>
+                <span class="tech-pill">Data Structures</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <button class="project-view-btn" data-project-id="algoverse">
+                <span>View Details</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+              <div class="project-external-links">
+                <a href="https://github.com/yokeshwaran/algoverse" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="GitHub Repository">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: SmartCampus -->
+          <article class="project-card glass-panel" data-category="fullstack" data-tilt data-tilt-max="7">
+            <div class="tilt-glare"></div>
+            <div>
+              <div class="project-badge-row">
+                <span class="project-type-tag">Full-Stack / College Portal</span>
+                <span class="project-year">2023–2024</span>
+              </div>
+              <h3 class="project-title">SmartCampus</h3>
+              <p class="project-desc">
+                Centralized academic resource portal designed for Hindustan College student cohorts. Features syllabus tracking, attendance simulator, and peer note repository.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-pill">Node.js</span>
+                <span class="tech-pill">Express</span>
+                <span class="tech-pill">MongoDB</span>
+                <span class="tech-pill">JWT</span>
+                <span class="tech-pill">Tailwind CSS</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <button class="project-view-btn" data-project-id="smartcampus">
+                <span>View Details</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+              <div class="project-external-links">
+                <a href="https://github.com/yokeshwaran/smartcampus" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="GitHub Repository">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         ACHIEVEMENTS & CORE VALUES
+    ===================================================================== -->
+    <section id="achievements">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="section-tag-dot"></span>
+            <span>Impact & Milestones</span>
+          </div>
+          <h2 class="section-title">Dedication to the Craft</h2>
+          <p class="section-desc">Key metrics defining my continuous progression in computer science and software development.</p>
+        </div>
+
+        <div class="achievements-grid">
+          <div class="achievement-card glass-panel" data-tilt data-tilt-max="5">
+            <div class="tilt-glare"></div>
+            <div class="achievement-num">2023–27</div>
+            <h3 class="achievement-title">Active CS Batch</h3>
+            <p class="achievement-desc">Deeply immersed in collegiate computer science coursework at Hindustan College.</p>
+          </div>
+
+          <div class="achievement-card glass-panel" data-tilt data-tilt-max="5">
+            <div class="tilt-glare"></div>
+            <div class="achievement-num">15+</div>
+            <h3 class="achievement-title">Curated Projects</h3>
+            <p class="achievement-desc">Engineered full-stack applications, CLI utilities, and algorithm simulations.</p>
+          </div>
+
+          <div class="achievement-card glass-panel" data-tilt data-tilt-max="5">
+            <div class="tilt-glare"></div>
+            <div class="achievement-num">100%</div>
+            <h3 class="achievement-title">Relentless Curiosity</h3>
+            <p class="achievement-desc">Constantly exploring new tech stacks, system designs, and competitive coding problems.</p>
+          </div>
+
+          <div class="achievement-card glass-panel" data-tilt data-tilt-max="5">
+            <div class="tilt-glare"></div>
+            <div class="achievement-num">Chennai</div>
+            <h3 class="achievement-title">Alwarpet Base</h3>
+            <p class="achievement-desc">Plugged into Chennai's vibrant tech developer ecosystem, hackathons, and conferences.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         CONTACT & REACH OUT
+    ===================================================================== -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="section-tag-dot"></span>
+            <span>Initiate Transmission</span>
+          </div>
+          <h2 class="section-title">Let's Build Something Impactful</h2>
+          <p class="section-desc">Available for software engineering internships, technical collaborations, and hackathons.</p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Info Cards -->
+          <div class="contact-info-panel">
+            
+            <!-- Email Card -->
+            <div class="contact-info-card glass-panel">
+              <div class="contact-card-left">
+                <div class="contact-icon-circle">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div>
+                  <div class="contact-card-title">Email Channel</div>
+                  <div class="contact-card-val">yokeshwaran.dev@gmail.com</div>
+                </div>
+              </div>
+              <button class="copy-btn" data-copy="yokeshwaran.dev@gmail.com" title="Copy to clipboard">Copy</button>
+            </div>
+
+            <!-- Location Card -->
+            <div class="contact-info-card glass-panel">
+              <div class="contact-card-left">
+                <div class="contact-icon-circle">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div>
+                  <div class="contact-card-title">Physical Location</div>
+                  <div class="contact-card-val">Alwarpet, Chennai, Tamil Nadu</div>
+                </div>
+              </div>
+              <button class="copy-btn" data-copy="Alwarpet, Chennai, Tamil Nadu, India" title="Copy to clipboard">Copy</button>
+            </div>
+
+            <!-- Academic Affiliation Card -->
+            <div class="contact-info-card glass-panel">
+              <div class="contact-card-left">
+                <div class="contact-icon-circle">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                </div>
+                <div>
+                  <div class="contact-card-title">Undergraduate College</div>
+                  <div class="contact-card-val">Hindustan College (2023–2027)</div>
+                </div>
+              </div>
+              <span class="t-tag">B.Sc CS</span>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links-row">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-badge-btn" aria-label="GitHub Profile">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span>GitHub</span>
+              </a>
+
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-badge-btn" aria-label="LinkedIn Profile">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                <span>LinkedIn</span>
+              </a>
+
+              <a href="mailto:yokeshwaran.dev@gmail.com" class="social-badge-btn" aria-label="Direct Email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <span>Email</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Contact Form Card -->
+          <div class="contact-form-card glass-panel" data-tilt data-tilt-max="4">
+            <div class="tilt-glare"></div>
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="form-name" class="form-label">Full Name</label>
+                <input type="text" id="form-name" class="form-input" placeholder="e.g. John Doe" required autocomplete="name">
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">Email Address</label>
+                <input type="email" id="form-email" class="form-input" placeholder="e.g. john@example.com" required autocomplete="email">
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject" class="form-label">Subject</label>
+                <input type="text" id="form-subject" class="form-input" placeholder="Internship Opportunity / Project Inquiry" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Message</label>
+                <textarea id="form-message" class="form-textarea" placeholder="Hello Yokeshwaran, I came across your portfolio and would love to discuss..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <span>Transmit Message</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       SITE FOOTER
+  ===================================================================== -->
+  <footer id="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="footer-copy">© 2024–2027 Yokeshwaran R. All rights reserved.</span>
+        <span class="footer-tagline">Crafted with precision • Hindustan College • Alwarpet, Chennai</span>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-chennai-pill">
+          <span class="beacon-dot"></span>
+          <span>Chennai, India (IST)</span>
+        </div>
+        <button class="quick-cmd-btn" data-open-terminal title="Open CLI Console">
+          CLI Shell
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       INTERACTIVE CYBER TERMINAL CLI MODAL
+  ===================================================================== -->
+  <div id="terminal-modal" class="terminal-modal-overlay" aria-hidden="true" role="dialog" aria-label="Interactive Developer Terminal">
+    <div class="terminal-window">
+      <!-- Titlebar -->
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <span class="t-light t-light-red" id="terminal-close-btn" style="cursor: pointer;" title="Close terminal"></span>
+          <span class="t-light t-light-yellow"></span>
+          <span class="t-light t-light-green"></span>
+          <span style="font-size: 0.8rem; font-family: var(--font-mono); color: #94A3B8; margin-left: 8px;">yokeshwaran@chennai-host — zsh</span>
+        </div>
+        <span style="font-size: 0.72rem; color: var(--accent-cyan); font-family: var(--font-mono);">Press ESC to exit</span>
+      </div>
+
+      <!-- Output Screen -->
+      <div id="terminal-output" class="terminal-screen">
+        <div class="terminal-entry">
+          <div class="terminal-response">
+<span class="cmd-cyan">=============================================================</span>
+  <span class="cmd-green">🌟 YOKESHWARAN R - INTERACTIVE DEVELOPER TERMINAL v2.5</span>
+  <span class="cmd-purple">B.Sc. Computer Science • Hindustan College • Chennai</span>
+<span class="cmd-cyan">=============================================================</span>
+Type <span class="cmd-cyan">help</span> to list available commands.
+Try typing: <span class="cmd-yellow">whoami</span>, <span class="cmd-yellow">education</span>, <span class="cmd-yellow">skills</span>, <span class="cmd-yellow">projects</span>, or <span class="cmd-yellow">sudo hire</span>.
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Bar -->
+      <div class="terminal-input-bar">
+        <span class="terminal-input-prompt">yokeshwaran@chennai:~$</span>
+        <input type="text" id="terminal-input" class="terminal-input-field" placeholder="type a command..." autocomplete="off" spellcheck="false">
+      </div>
+
+      <!-- Quick Command Buttons -->
+      <div class="terminal-quick-cmds">
+        <span style="color: var(--text-muted); font-size: 0.75rem; font-family: var(--font-mono);">Quick:</span>
+        <button class="quick-cmd-btn" onclick="window.runTerminalCommand('help')">help</button>
+        <button class="quick-cmd-btn" onclick="window.runTerminalCommand('whoami')">whoami</button>
+        <button class="quick-cmd-btn" onclick="window.runTerminalCommand('education')">education</button>
+        <button class="quick-cmd-btn" onclick="window.runTerminalCommand('skills')">skills</button>
+        <button class="quick-cmd-btn" onclick="window.runTerminalCommand('projects')">projects</button>
+        <button class="quick-cmd-btn" onclick="window.runTerminalCommand('sudo hire')">sudo hire</button>
+        <button class="quick-cmd-btn" onclick="window.runTerminalCommand('clear')">clear</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       PROJECT DETAILS MODAL
+  ===================================================================== -->
+  <div id="project-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-label="Project Details Modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div>
+          <span id="modal-project-category" class="project-type-tag">Category</span>
+          <h3 id="modal-project-title" class="section-title" style="font-size: 1.6rem; margin: 8px 0 4px 0;">Project Title</h3>
+          <p id="modal-project-subtitle" style="color: var(--text-secondary); font-size: 0.95rem;">Project subtitle</p>
+        </div>
+        <button id="project-modal-close" class="modal-close-btn" aria-label="Close Project Modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="modal-content-scroll">
+        <h4 style="color: var(--text-heading); font-size: 1.05rem; margin-bottom: 8px;">Architecture & Overview</h4>
+        <p id="modal-project-description" style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">Description here...</p>
+
+        <h4 style="color: var(--text-heading); font-size: 1.05rem; margin-top: 24px; margin-bottom: 8px;">Engineering Highlights</h4>
+        <ul id="modal-project-highlights" class="modal-highlights-list"></ul>
+
+        <h4 style="color: var(--text-heading); font-size: 1.05rem; margin-top: 24px; margin-bottom: 8px;">Tech Stack</h4>
+        <div id="modal-project-tech" class="modal-tech-row"></div>
+
+        <div class="modal-actions">
+          <a id="modal-project-github" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            <span>Inspect GitHub Repository</span>
+          </a>
+          <a id="modal-project-live" href="#contact" class="btn btn-primary">
+            <span>Discuss This Project</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       RESUME QUICK PREVIEW MODAL
+  ===================================================================== -->
+  <div id="resume-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-label="Curated Resume Document">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div>
+          <span class="project-type-tag">Curriculum Vitae</span>
+          <h3 class="section-title" style="font-size: 1.6rem; margin: 8px 0 4px 0;">Yokeshwaran R — Resume</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">B.Sc. Computer Science • Hindustan College (2023–2027)</p>
+        </div>
+        <button id="resume-modal-close" class="modal-close-btn" aria-label="Close Resume Modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="modal-content-scroll" style="font-size: 0.92rem; line-height: 1.7;">
+        <div style="background: rgba(255, 255, 255, 0.03); padding: 18px; border-radius: 8px; border: 1px solid var(--border-glass); margin-bottom: 20px;">
+          <h4 style="color: var(--accent-cyan); margin-bottom: 6px;">Profile Summary</h4>
+          <p style="color: var(--text-secondary);">
+            Undergraduate Computer Science student at Hindustan College, Chennai (Batch 2023–2027), alumnus of MCTM School. Solid grounding in Data Structures, Algorithms, Systems Architecture, and modern Full-Stack development (React, Node.js, C++, SQL). Passionate about writing reliable software and eager to contribute to fast-paced engineering teams.
+          </p>
+        </div>
+
+        <h4 style="color: var(--text-heading); margin-bottom: 8px;">Education</h4>
+        <div style="margin-bottom: 16px;">
+          <strong style="color: var(--text-primary);">Hindustan College, Chennai</strong> — <em>B.Sc. Computer Science (2023–2027)</em><br>
+          <span style="color: var(--text-secondary);">Core courses: DSA, OOP in C++/Java, Database Management Systems, OS, Computer Networks.</span>
+        </div>
+        <div style="margin-bottom: 20px;">
+          <strong style="color: var(--text-primary);">MCTM School, Chennai</strong> — <em>Higher Secondary & Secondary</em><br>
+          <span style="color: var(--text-secondary);">High academic standing with strong foundation in advanced mathematics and science.</span>
+        </div>
+
+        <h4 style="color: var(--text-heading); margin-bottom: 8px;">Key Technical Competencies</h4>
+        <div class="modal-tech-row" style="margin-bottom: 24px;">
+          <span class="tech-pill">C++</span>
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">JavaScript (ES6+)</span>
+          <span class="tech-pill">TypeScript</span>
+          <span class="tech-pill">React.js</span>
+          <span class="tech-pill">Node.js</span>
+          <span class="tech-pill">SQL / MySQL</span>
+          <span class="tech-pill">MongoDB</span>
+          <span class="tech-pill">Git / GitHub</span>
+          <span class="tech-pill">Linux Shell</span>
+        </div>
+
+        <div class="modal-actions">
+          <button class="btn btn-primary" onclick="window.print()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            <span>Print / Save PDF</span>
+          </button>
+          <a href="mailto:yokeshwaran.dev@gmail.com?subject=Interview%20Invitation%20-%20Yokeshwaran%20R" class="btn btn-secondary">
+            <span>Invite for Interview</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-notification" class="toast-badge" role="status" aria-live="polite">
+    Notification
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/audio.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/tilt.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
